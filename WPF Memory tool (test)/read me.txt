@@ -1,0 +1,63 @@
+﻿╔══════════════════════════════════════════╗
+║         WPF Memory Hacker - Guide        ║
+╚══════════════════════════════════════════╝
+
+📌 PURPOSE:
+A WPF-based external memory editor for game hacking (e.g., health hack, aimbot). 
+Uses syscalls and obfuscation to evade anti-cheat detection.
+
+⚠ WARNING: 
+For educational use only. Test on OFFLINE games first.
+
+───────────────────────────────────────────
+📂 FOLDER STRUCTURE:
+/WPF-Memory-Hacker
+│
+├── 📄 MemoryHelper.cs      - Core memory R/W (uses NtReadVirtualMemory)
+├── 📄 ProcessScanner.cs    - Finds/open game processes
+├── 📄 AntiDetect.cs        - Obfuscation + anti-detection tricks
+├── 📄 KernelInterface.cs   - Kernel-mode bypass (EAC/Vanguard)
+├── 📄 ConfigManager.cs     - Saves hack settings to JSON
+│
+└── 📂 CheatModules/        - Individual hacks:
+    ├── 📄 HealthHack.cs    - Freeze health/ammo
+    ├── 📄 Aimbot.cs        - Auto-aim calculations
+    └── 📄 ESP.cs           - Enemy highlight overlay
+
+───────────────────────────────────────────
+🔧 HOW TO USE:
+1. Find game process:
+   - Call `ProcessScanner.FindProcess("game.exe")`
+   
+2. Read memory:
+   - `MemoryHelper.ReadInt32(processHandle, 0xDEADBEEF)`
+
+3. Apply hacks:
+   - HealthHack.SetHealth(processHandle, address, 1000)
+   - Aimbot.CalculateAngle(playerPos, enemyPos)
+
+4. Evade detection:
+   - Use `AntiDetect.Obfuscate("ReadProcessMemory")`
+   - Add random delays with `AntiDetect.RandomDelay(100)`
+
+───────────────────────────────────────────
+⚡ PRO TIPS:
+• Use Cheat Engine to find memory addresses first.
+• For kernel-mode (EAC bypass):
+  - Call `KernelInterface.DisableAC()` (requires driver)
+• Rename methods/strings to avoid signatures.
+
+───────────────────────────────────────────
+❓ EXAMPLE FLOW:
+1. Scan for "game.exe" → Get process handle
+2. Find health address (e.g., 0x12345678)
+3. Lock health:
+   while (true) {
+       HealthHack.SetHealth(handle, 0x12345678, 1000);
+       AntiDetect.RandomDelay(50);
+   }
+
+───────────────────────────────────────────
+📜 LEGAL DISCLAIMER:
+This tool is for RESEARCH ONLY. Misuse may violate 
+game TOS/EULAs. Use responsibly.

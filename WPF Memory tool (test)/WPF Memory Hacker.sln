@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF Memory Hacker", "WPF Memory Hacker.csproj", "{173485A3-64D0-4B98-BA79-09F847E0F0E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{173485A3-64D0-4B98-BA79-09F847E0F0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{173485A3-64D0-4B98-BA79-09F847E0F0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{173485A3-64D0-4B98-BA79-09F847E0F0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{173485A3-64D0-4B98-BA79-09F847E0F0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7664D45-1715-4D65-905E-8383DBD64B09}
+	EndGlobalSection
+EndGlobal
