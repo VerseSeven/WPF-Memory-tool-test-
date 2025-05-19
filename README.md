@@ -1,6 +1,4 @@
 
-### ✅ GitHub-Friendly `README.md` (Human Tone, Not Overly “AI-ish”)
-
 ````markdown
 # WPF Memory Hacker
 
